@@ -1,0 +1,130 @@
+.mobilenav {
+    position:fixed;
+    width:100%;
+    height:100%;
+    font-family: Inter, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    background-color: $primaryBackgroundColor;
+    padding-top:25px;
+    z-index:98;
+    top:0;
+    left:0;
+
+    &__wrapper {
+        width:90%;
+        margin:auto;
+    }
+    &__top {
+        @include flexRowSpaceB();
+        position:relative;
+    }
+    &__h2 {
+        color:$primaryTextColor;
+        font-size: 16px;
+        font-weight: 700;
+        margin-top:65px;
+    }
+    &__2columns {
+        display:flex;
+    }
+    &__column {
+        @include flexColumn();
+        width:50%;
+    }
+    &__column a {
+        text-decoration: none;
+        color:$secondaryTextColor;
+        margin-top:25px;
+    }
+    &__contact {
+        text-decoration: none;
+        color:$secondaryTextColor;
+        margin-top:25px;
+    }
+    &__clock {
+        margin-top:25px;
+        margin-bottom:-5px
+    }
+}
+
+@keyframes rotate1{
+    0% {
+        transform:rotate(0deg);
+    }
+    100% {
+        transform:rotate(45deg) translateX(17%);
+    }
+}
+@keyframes rotate2{
+    0% {
+        transform:rotate(0deg);
+    }
+    100% {
+        transform:rotate(-45deg) translateX(17%);
+    }
+}
+@keyframes rotate3{
+    0% {
+        transform:rotate(45deg) translateX(17%);
+    }
+    100% {
+        transform:rotate(0deg);
+    }
+}
+@keyframes rotate4{
+    0% {
+        transform:rotate(-45deg) translateX(17%);
+    }
+    100% {
+        transform:rotate(0deg);
+    }
+}
+.rotate1 {
+    animation-name: rotate1;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+}
+.rotate2 {
+    animation-name: rotate2;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+}
+.rotate3 {
+    animation-name: rotate3;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+}
+.rotate4 {
+    animation-name: rotate4;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+}
+.line1 {
+    width:20px;
+    border:1px solid $secondaryBackgroundColor;
+    margin-bottom:3px;
+}
+.line2 {
+    width:20px;
+    border:1px solid $secondaryBackgroundColor;
+    margin-bottom:3px;
+}
+.hamburger {
+    display:none;
+    cursor:pointer;
+    position:absolute;
+    right:0;
+    z-index:99;
+}
+@media screen and (max-width:767px) {
+    .hamburger {
+        display:block;
+    }
+}
+.header__show {
+    display:block;
+}
+.header__hide {
+    display:none;
+}

@@ -1,0 +1,55 @@
+.dmhero {
+    background:no-repeat center center  url("./components/img/dmhero/dmhero1.jpg");
+    background-size: cover;
+    font-family: Inter, sans-serif;
+    text-align: center;
+    height:720px;
+   
+    @media screen and (max-width:767px) {
+        background:no-repeat center center url("./components/img/dmhero/dmhero2.jpg");
+        background-size: cover;
+        height:920px;
+    }
+    &__wrapper {   
+        width:80%; 
+        margin:auto; 
+    }
+    &__h3 {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 32px;
+        color: $primaryTextColor;
+        padding-top:12%;
+        margin-bottom:1.7%;
+
+        @media screen and (max-width:767px) {
+            font-size: 16px;
+            line-height: 20px;
+            padding-top:510px;
+            margin-bottom:20px;
+            }
+    }
+    &__biglogo{
+        width:100%;
+        margin-bottom:100px;
+
+        @media screen and (max-width:767px) {
+                margin-bottom:85px;
+            }
+    }
+    &__button {
+        width:150px;
+        height:56px;
+        background-color: $secondaryBackgroundColor;
+        border-radius:8px;
+        text-decoration: none;
+        padding:16px 45px;
+        color:black;
+
+        @media screen and (max-width:767px) {
+            background-color:transparent;
+            border:1px solid $primaryTextColor;
+            color: $primaryTextColor;
+            }
+    }
+}

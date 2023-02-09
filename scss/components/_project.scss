@@ -1,0 +1,117 @@
+.project {
+    background-color:$primaryBackgroundColor;
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    color: $secondaryTextColor;
+    padding-top:90px;
+
+    & a {
+        text-decoration:none;
+        color: $secondaryTextColor;
+    }
+    &__wrapper {
+        width:80%;
+        margin:auto;
+        overflow:hidden;
+
+        @media screen and (max-width:767px) {
+            width:90%;
+            }        
+    }
+    &__goback_h1 {
+        @include flexRowSpaceB();
+
+        @media screen and (max-width:767px) {
+            display:block;
+            }   
+    }
+    &__h1_container {
+        width:47vw;
+
+        @media screen and (max-width:767px) {
+            width:100%;
+            }
+    }
+    &__arrow {
+        margin-right:12px;
+    }  
+    &__client {
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom:10px;
+    }  
+    &__h1 {
+        font-size: 64px;
+        font-weight: 700;
+        line-height: 72px;
+        color:$primaryTextColor;
+        margin-bottom:25px;
+
+        @media screen and (max-width:767px) {
+            font-size: 40px;
+            line-height: 48px;
+            margin-bottom:15px;
+            }        
+    }
+    &__links a {
+        margin-right:15px;
+        font-size: 14px;
+        font-weight: 500;
+        white-space: nowrap;
+    }
+    &__p {
+        margin-top:25px;
+        font-size: 20px;
+    }
+    &__photo {
+        border-radius: 16px;
+        width:100%;
+        margin-top:55px;
+        transition:transform 0.5s;
+
+        &:hover {
+            transform:scale(1.05);
+        }
+    }
+    &__p2 {
+        font-weight: 700;
+        line-height: 28px;
+        color:$primaryTextColor;
+        margin:55px 0 25px;
+    }
+    &__p_container {
+        width:47vw;
+        margin-left:33vw;
+
+        @media screen and (max-width:767px) {
+            width:100%;
+            margin:auto;
+            }
+    }
+    &__bottom {
+        display:flex;
+        justify-content:flex-start;
+        align-items:flex-start;
+        margin-top:40px;
+    }
+    &__bottom_text {
+        margin-left:65px;
+
+        @media screen and (max-width:767px) {
+            margin-left:20px;
+            }
+    }
+    &__h2 {
+        color:$primaryTextColor;
+        font-size: 20px;
+    }
+    &__bottom_p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+    &__bottom_img {
+        object-fit: contain;
+    }
+}

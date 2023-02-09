@@ -1,0 +1,22 @@
+$primaryTextColor: #FFF;
+$secondaryTextColor: #999999;
+$tertriaryTextColor: black;
+$primaryBackgroundColor: black;
+$secondaryBackgroundColor:#FFF;
+@mixin flexRowSpaceB {
+    display:flex;
+    justify-content:space-between;
+}
+@mixin flexColumn {
+    display:flex;
+    flex-direction:column;
+}
+@mixin flexColumnSpaceB {
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
+@mixin flexRowCenter {
+    display:flex;
+    justify-content:center;
+}

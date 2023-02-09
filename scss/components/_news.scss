@@ -1,0 +1,94 @@
+.news {   
+    background-color: $primaryBackgroundColor;
+    font-family: Inter;
+    color: $primaryTextColor;
+    padding-bottom:90px;
+
+    &__wrapper {
+        padding-top:150px;
+        width:80%;
+        margin:auto;
+
+        @media screen and (max-width:767px) {
+            width:90%;
+            padding-top:100px
+            }
+    }
+    &__h1 {
+        font-size: 56px;
+        font-weight: 700;
+        line-height: 64px;
+
+        @media screen and (max-width:767px) {
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 48px;
+            margin-bottom:-24px;
+            }
+    }
+    &__columns {
+        @include flexRowSpaceB();
+
+        @media screen and (max-width:767px) {
+            @include flexColumnSpaceB();
+            }
+    }
+    &__column {
+        width:45%;
+        overflow:hidden;
+
+        @media screen and (max-width:767px) {
+            width:100%
+            }
+    }
+    &__photo {
+        margin:55px 0 22px;
+        border-radius:16px;
+        width:100%;
+        object-fit: cover;
+        transition:transform 0.5s;
+
+        &:hover {
+            transform:scale(1.05);
+        }
+    }
+    &__button_date {
+        display:flex;
+        margin-bottom:14px;
+    }
+    &__button {
+        padding:6px 12px;
+        border:1px solid #999999;
+        border-radius: 8px;
+        color: $secondaryTextColor;
+    }
+    &__date {
+        padding-top:6px;
+        margin-left:24px;
+        color: $secondaryTextColor;
+    }
+    &__h2 {
+        font-size: 32px;
+        font-weight: 500;
+        margin-bottom:24px;
+
+        @media screen and (max-width:767px) {
+            font-size: 18px;
+            }
+    }
+    &__button2 {
+        @include flexRowCenter();
+        align-items:center;
+        width:40px;
+        height:40px;
+        border-radius:20px;
+        background:#FFF;
+        transition: width, 0.6s;
+
+        &:hover {
+            color:$primaryBackgroundColor;
+            width:80px;
+            @include flexRowCenter();
+        }
+    }
+}

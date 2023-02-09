@@ -1,0 +1,130 @@
+.whoarewe {
+    background-color: $primaryBackgroundColor;
+    font-family: Inter;
+    font-weight: 400;
+    color:#999999;
+    padding-top:40px;
+
+    &__container {
+        width:80%;
+        margin:auto;
+
+        @media screen and (max-width:767px) {
+            width:90%;
+            }
+
+    }
+    &__phototext {
+        display:flex;
+        overflow:hidden;
+
+        @media screen and (max-width:767px) {
+            display:block;
+            }
+    }
+    &__topphoto {
+        border-radius:16px;
+        width:100%;
+        align-self:flex-start;
+        transition: transform 0.5s;
+
+        &:hover {
+            transform:scale(1.05)
+        }
+        @media screen and (max-width:767px) {
+            display:none;
+            }
+    }
+    &__toptext {
+        margin-left:8vw;
+    }
+    &__h1 {
+        font-size: 64px;
+        font-weight: 700;
+        line-height: 72px;
+        color: $primaryTextColor;
+        margin-bottom:16px;
+
+        @media screen and (max-width:767px) {
+            font-size: 40px;
+            line-height: 48px;
+            margin-bottom:24px;
+            }
+    }
+    &__h5 {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 28px;
+        margin-bottom:40px;
+
+        @media screen and (max-width:767px) {
+            font-size: 20px;
+            margin-bottom:32px;
+            }
+    }
+    &__p {
+        font-size: 14px;
+        line-height: 20px;
+        max-width:240px;
+    }
+    &__line {
+        width:100%;
+        border:1px solid #FFFFFF33;
+        margin:40px 0 32px;
+
+        @media screen and (max-width:767px) {
+            margin:40px 0 24px;
+            }
+    }
+    &__bottom {
+        display:flex;
+        gap:35px;
+    }
+    &__column {
+        margin-right:15.3vw;
+
+        @media screen and (max-width:767px) {
+            margin-right:0;
+            justify-self:flex-end;
+            }
+    }
+    &__2columns {
+        @include flexRowSpaceB();
+    }
+    &__personphoto {
+        border-radius:50%;
+        align-self:flex-start;
+    }
+    &__name,
+    &__years {
+        color: $primaryTextColor;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 28px;
+    }
+    &__job,
+    &__exp {
+        font-size: 12px;
+        line-height: 18px;
+        margin:4px 0 16px;
+    }
+    &__p2 {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    &__jobdescription {
+        font-size: 14px;
+        line-height: 20px;
+        margin-right: 5px;
+    }
+    &__lasttext {
+        margin:39px 0 71px;
+        font-size: 18px;
+        line-height: 28px;
+        color: $primaryTextColor;
+
+        @media screen and (max-width:767px) {
+            padding-bottom:80px;
+            }
+    }
+}

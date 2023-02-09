@@ -1,0 +1,128 @@
+.footer {
+    width:80%;
+    margin:auto;
+    font-family: Inter;
+    margin-top:50px;
+
+    @media screen and (max-width:1170px) {
+        width:90%;
+    }
+
+    @media screen and (max-width:930px) {
+        width:99%;
+    }
+     @media screen and (max-width:767px) {
+        width:90%;
+    }
+    &__5columns {
+        @include flexRowSpaceB();
+
+        @media screen and (max-width:767px){
+            display:block;
+        }
+    }
+    &__column,
+    &__column3
+    &__column4 {
+        @include flexColumn();
+    }
+    @media screen and (max-width:767px) {
+        .footer__column {
+            margin-bottom:60px;
+        }
+        .footer__column3 {
+            display:none;
+        }
+        .footer__column4 {
+            display:none;
+        }
+    }
+    &__column1 {
+        @include flexColumnSpaceB();
+        align-items:flex-start;
+    }
+    &__hidden_column {
+        display:none;
+
+        @media screen and (max-width:767px) {
+            @include flexColumn();
+            margin-bottom:60px;
+        }
+    }
+    &__column1 {
+        @media screen and (max-width:767px) {
+            flex-direction:row;
+            align-items:center;
+            margin-bottom:15px;
+        }
+    }
+    &__links1, 
+    &__links2, 
+    &__links3 {
+        @include flexColumn();
+    }
+    @media screen and (max-width:767px) {
+        .footer__links1 {
+            flex-wrap:wrap;
+            height:150px;
+        }
+        .footer__links2 {
+            flex-wrap:wrap;
+            height:250px;
+        }
+        .footer__links1 a {
+            min-width:170px;
+        }
+        .footer__links2 a {
+            min-width:170px;
+        }
+    }
+    &__h2 {
+        font-size: 16px;
+        font-weight: 700;
+        color:#000000;
+        white-space: nowrap;
+    }
+    &__links1 {
+        p,
+        a {
+            text-decoration: none;
+            color: $tertriaryTextColor;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 20px;
+            margin-top:30px;
+        }
+    }
+    &__links2 a,
+    &__links3 p,
+    &__links3 a {
+        text-decoration: none;
+        color: $tertriaryTextColor;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 20px;
+        margin-top:30px;
+    }
+    &__hidden {
+        visibility:hidden;
+        @media screen and (max-width:767px) {
+            display:none;
+            }
+    }
+    &__clock {
+        align-self:flex-start;
+        margin:22px 0 -18px;
+    }
+    &__line {
+        width:100%;
+        border:1px solid #CCCCCC;
+        margin:80px 0 32px;
+
+        @media screen and (max-width:767px) {
+            width:100%;
+            border:1px solid #CCCCCC;
+            margin:24px 0 24px;
+            }
+    }
+}
