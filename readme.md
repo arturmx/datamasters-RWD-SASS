@@ -1,4 +1,4 @@
-datamasters company page
+#datamasters company page
 
 contains:
 
@@ -10,4 +10,4 @@ contains:
 
 -burger menu with animated open/close icon
 
--some simple hover animations
+-some hover animations
