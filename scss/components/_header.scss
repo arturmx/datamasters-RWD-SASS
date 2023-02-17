@@ -20,13 +20,6 @@ body {
         background-color:transparent;
     }
 
-    &__color {
-        background-color:$primaryBackgroundColor;
-        animation-name: scroll;
-        animation-duration: 0.3s;
-        animation-fill-mode: forwards;
-    }
-
     &__wrapper {
         @include flexRowSpaceB();
         align-items:center;
@@ -53,7 +46,7 @@ body {
         white-space:nowrap ;
         font-size: 16px;
         font-weight: 500;
-        // color:$secondaryTextColor;
+        color:$primaryTextColor;
         text-decoration: none;
 
         &:hover {
@@ -71,6 +64,9 @@ body {
         border-radius: 8px;
         text-decoration: none;
         align-items:center;
+        color:$primaryTextColor;
+        border:1px solid $primaryTextColor;
+
 
         &:hover {
             color:$primaryTextColor;
@@ -99,5 +95,22 @@ body {
     }
     100% {
         background-color: transparent;
+    }
+}
+.header.header__active {
+    background-color:$primaryBackgroundColor;
+    animation-name: scroll;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+
+    .header {
+        &__nav_links {
+            color:$secondaryTextColor
+            }
+
+        &__button {
+            border:1px solid $secondaryTextColor;
+            color:$secondaryTextColor;
+            }
     }
 }

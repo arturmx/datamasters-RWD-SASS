@@ -85,12 +85,6 @@ body {
 .header__transparent {
   background-color: transparent;
 }
-.header__color {
-  background-color: black;
-  animation-name: scroll;
-  animation-duration: 0.3s;
-  animation-fill-mode: forwards;
-}
 .header__wrapper {
   display: flex;
   justify-content: space-between;
@@ -121,6 +115,7 @@ body {
   white-space: nowrap;
   font-size: 16px;
   font-weight: 500;
+  color: #FFF;
   text-decoration: none;
 }
 .header__nav_links:hover {
@@ -137,6 +132,8 @@ body {
   border-radius: 8px;
   text-decoration: none;
   align-items: center;
+  color: #FFF;
+  border: 1px solid #FFF;
 }
 .header__button:hover {
   color: #FFF;
@@ -167,6 +164,20 @@ body {
     background-color: transparent;
   }
 }
+.header.header__active {
+  background-color: black;
+  animation-name: scroll;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+}
+.header.header__active .header__nav_links {
+  color: #999999;
+}
+.header.header__active .header__button {
+  border: 1px solid #999999;
+  color: #999999;
+}
+
 .mobilenav {
   position: fixed;
   width: 100%;
