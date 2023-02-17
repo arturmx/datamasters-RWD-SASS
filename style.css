@@ -48,17 +48,48 @@ table {
   border-spacing: 0;
 }
 
+.white {
+  color: #FFF;
+}
+
+.grey {
+  color: #999999;
+}
+
+.whiteborder {
+  border: 1px solid #FFF;
+}
+
+.greyborder {
+  border: 1px solid #999999;
+}
+
 body {
   box-sizing: border-box;
 }
 
 .header {
-  background-color: black;
+  background-color: transparent;
   font-family: Inter;
   position: fixed;
   width: 100%;
   height: 110px;
   z-index: 99;
+}
+.header.header__transparent {
+  background-color: transparent;
+  animation-name: scrollback;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+}
+.header__transparent {
+  background-color: transparent;
+}
+.header__color {
+  background-color: black;
+  animation-name: scroll;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
 }
 .header__wrapper {
   display: flex;
@@ -90,7 +121,6 @@ body {
   white-space: nowrap;
   font-size: 16px;
   font-weight: 500;
-  color: #999999;
   text-decoration: none;
 }
 .header__nav_links:hover {
@@ -105,8 +135,6 @@ body {
   font-weight: 500;
   padding: 12px 24px;
   border-radius: 8px;
-  color: #999999;
-  border: 1px solid #999999;
   text-decoration: none;
   align-items: center;
 }
@@ -119,10 +147,26 @@ body {
     display: none;
   }
 }
-.header__fix {
-  height: 110px;
-}
 
+@keyframes scroll {
+  0% {
+    background-color: transparent;
+  }
+  20% {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+  }
+  100% {
+    background-color: black;
+  }
+}
+@keyframes scrollback {
+  0% {
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
+  }
+  100% {
+    background-color: transparent;
+  }
+}
 .mobilenav {
   position: fixed;
   width: 100%;

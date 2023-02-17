@@ -2,12 +2,30 @@ body {
     box-sizing: border-box;
 }
 .header {
-    background-color: $primaryBackgroundColor;
+    background-color: transparent;
     font-family: Inter;
     position:fixed;
     width:100%;
     height:110px;
     z-index:99;
+
+    &.header__transparent {
+        background-color:transparent;
+        animation-name: scrollback;
+        animation-duration: 0.3s;
+        animation-fill-mode: forwards;
+    }
+
+    &__transparent {
+        background-color:transparent;
+    }
+
+    &__color {
+        background-color:$primaryBackgroundColor;
+        animation-name: scroll;
+        animation-duration: 0.3s;
+        animation-fill-mode: forwards;
+    }
 
     &__wrapper {
         @include flexRowSpaceB();
@@ -35,7 +53,7 @@ body {
         white-space:nowrap ;
         font-size: 16px;
         font-weight: 500;
-        color:$secondaryTextColor;
+        // color:$secondaryTextColor;
         text-decoration: none;
 
         &:hover {
@@ -51,8 +69,6 @@ body {
         font-weight: 500;
         padding:12px 24px;
         border-radius: 8px;
-        color:$secondaryTextColor;
-        border:1px solid $secondaryTextColor;
         text-decoration: none;
         align-items:center;
 
@@ -65,8 +81,23 @@ body {
             display:none;
         }
     }
-
-    &__fix {
-        height:110px;
+}
+@keyframes scroll {
+    0% {
+        background-color: transparent;
+    }
+    20% {
+        background:linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0))
+    }
+    100% {
+        background-color:$primaryBackgroundColor;
+    }
+}
+@keyframes scrollback {
+    0% {
+        background:linear-gradient(rgba(0, 0, 0, 0.90), rgba(0, 0, 0, 0));
+    }
+    100% {
+        background-color: transparent;
     }
 }
