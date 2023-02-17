@@ -48,6 +48,10 @@ table {
   border-spacing: 0;
 }
 
+body {
+  box-sizing: border-box;
+}
+
 .header {
   background-color: black;
   font-family: Inter;
@@ -275,7 +279,6 @@ table {
 .project__wrapper {
   width: 80%;
   margin: auto;
-  overflow: hidden;
 }
 @media screen and (max-width: 767px) {
   .project__wrapper {
@@ -331,10 +334,16 @@ table {
   margin-top: 25px;
   font-size: 20px;
 }
-.project__photo {
+.project__photo-div {
   border-radius: 16px;
   width: 100%;
   margin-top: 55px;
+  overflow: hidden;
+}
+.project__photo {
+  object-fit: cover;
+  width: 100%;
+  display: block;
   transition: transform 0.5s;
 }
 .project__photo:hover {
@@ -425,19 +434,24 @@ table {
 }
 .news__column {
   width: 45%;
-  overflow: hidden;
 }
 @media screen and (max-width: 767px) {
   .news__column {
     width: 100%;
   }
 }
-.news__photo {
+.news__photo-div {
+  overflow: hidden;
+  border-radius: 16px;
+  width: 100%;
   margin: 55px 0 22px;
+}
+.news__photo {
   border-radius: 16px;
   width: 100%;
   object-fit: cover;
   transition: transform 0.5s;
+  display: block;
 }
 .news__photo:hover {
   transform: scale(1.05);
@@ -687,18 +701,29 @@ table {
 }
 .whoarewe__phototext {
   display: flex;
-  overflow: hidden;
 }
 @media screen and (max-width: 767px) {
   .whoarewe__phototext {
     display: block;
   }
 }
-.whoarewe__topphoto {
+.whoarewe__photo-div {
   border-radius: 16px;
   width: 100%;
   align-self: flex-start;
+  overflow: hidden;
+}
+@media screen and (max-width: 1400px) {
+  .whoarewe__photo-div {
+    flex-shrink: 0.7;
+  }
+}
+.whoarewe__topphoto {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 16px;
   transition: transform 0.5s;
+  display: block;
 }
 .whoarewe__topphoto:hover {
   transform: scale(1.05);

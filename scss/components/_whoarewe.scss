@@ -16,18 +16,27 @@
     }
     &__phototext {
         display:flex;
-        overflow:hidden;
 
         @media screen and (max-width:767px) {
             display:block;
             }
     }
-    &__topphoto {
+    &__photo-div {
         border-radius:16px;
         width:100%;
         align-self:flex-start;
+        overflow:hidden;
+        
+        @media screen and (max-width:1400px) {
+            flex-shrink:0.7;
+            }
+    }
+    &__topphoto {
+        width:100%;
+        object-fit:cover;
+        border-radius:16px;
         transition: transform 0.5s;
-
+        display:block;
         &:hover {
             transform:scale(1.05)
         }

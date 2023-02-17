@@ -14,8 +14,6 @@
     &__wrapper {
         width:80%;
         margin:auto;
-        overflow:hidden;
-
         @media screen and (max-width:767px) {
             width:90%;
             }        
@@ -65,12 +63,17 @@
         margin-top:25px;
         font-size: 20px;
     }
-    &__photo {
+    &__photo-div {
         border-radius: 16px;
         width:100%;
         margin-top:55px;
+        overflow:hidden;
+    }
+    &__photo {
+        object-fit:cover;
+        width:100%;
+        display:block;
         transition:transform 0.5s;
-
         &:hover {
             transform:scale(1.05);
         }
