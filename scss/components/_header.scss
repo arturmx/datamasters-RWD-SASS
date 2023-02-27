@@ -8,16 +8,12 @@ body {
     width:100%;
     height:110px;
     z-index:99;
+    animation-name: scrollback;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
 
-    &.header__transparent {
-        background-color:transparent;
-        animation-name: scrollback;
-        animation-duration: 0.3s;
-        animation-fill-mode: forwards;
-    }
-
-    &__transparent {
-        background-color:transparent;
+    &__logo {
+        margin-top: -3px;
     }
 
     &__wrapper {
@@ -50,7 +46,6 @@ body {
         text-decoration: none;
 
         &:hover {
-            color: $primaryTextColor;
             text-decoration:underline;
             text-underline-offset:12px;
         }
@@ -66,7 +61,6 @@ body {
         align-items:center;
         color:$primaryTextColor;
         border:1px solid $primaryTextColor;
-
 
         &:hover {
             color:$primaryTextColor;
@@ -97,7 +91,7 @@ body {
         background-color: transparent;
     }
 }
-.header.header__active {
+.header__active {
     background-color:$primaryBackgroundColor;
     animation-name: scroll;
     animation-duration: 0.3s;
@@ -105,12 +99,20 @@ body {
 
     .header {
         &__nav_links {
-            color:$secondaryTextColor
+            color:$secondaryTextColor;
+
+            &:hover {
+                color: $primaryTextColor;
+            }
             }
 
         &__button {
             border:1px solid $secondaryTextColor;
             color:$secondaryTextColor;
+
+            &:hover {
+                color: $primaryTextColor;
+            }
             }
     }
 }

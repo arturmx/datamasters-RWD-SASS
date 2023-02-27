@@ -13,6 +13,10 @@
             width:90%;
             }
 
+        @media screen and (max-width:350px) {
+            width:99%;
+            }
+
     }
     &__phototext {
         display:flex;
@@ -60,7 +64,7 @@
             margin-bottom:24px;
             }
     }
-    &__h5 {
+    &__h6 {
         font-size: 18px;
         font-weight: 400;
         line-height: 28px;
@@ -88,6 +92,10 @@
     &__bottom {
         display:flex;
         gap:35px;
+
+        @media screen and (max-width:350px) {
+            gap:15px;
+            }
     }
     &__column {
         margin-right:15.3vw;

@@ -18,14 +18,14 @@
             width:90%;
             }        
     }
-    &__goback_h1 {
+    &__goback_h2 {
         @include flexRowSpaceB();
 
         @media screen and (max-width:767px) {
             display:block;
             }   
     }
-    &__h1_container {
+    &__h2_container {
         width:47vw;
 
         @media screen and (max-width:767px) {
@@ -40,7 +40,7 @@
         font-weight: 500;
         margin-bottom:10px;
     }  
-    &__h1 {
+    &__h2 {
         font-size: 64px;
         font-weight: 700;
         line-height: 72px;
@@ -106,7 +106,7 @@
             margin-left:20px;
             }
     }
-    &__h2 {
+    &__h3 {
         color:$primaryTextColor;
         font-size: 20px;
     }

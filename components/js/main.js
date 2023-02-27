@@ -27,10 +27,8 @@ const line2 = document.querySelector(".line2");
 
     if (window.scrollY > 0 || window.pageYOffset > 0) {
       header.classList.add("header__active");
-      header.classList.remove("header__transparent");
     } else {
       header.classList.remove("header__active");
-      header.classList.add("header__transparent");
     }
   };
   activeHeader();

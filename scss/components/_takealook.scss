@@ -12,7 +12,7 @@
     @media screen and (max-width:767px) {
         width:90%;
         }
-    &__h2 {
+    &__h3 {
         font-size: 64px;
         line-height: 72px;
         font-weight: 700;
@@ -53,11 +53,11 @@
             max-width:100%
             }
     }
-    &__h3_and_date {
+    &__h4_and_date {
         display:flex;
         margin-bottom:10px;
     }
-    &__h3_button {
+    &__h4_button {
         @include flexRowCenter();
         align-items:center;
         padding:6px 12px;
@@ -70,7 +70,7 @@
         align-self:center;
         font-size: 14px;
     }
-    &__h4 {
+    &__h5 {
         font-size: 24px;
         line-height: 32px;
         margin-bottom:10px;
